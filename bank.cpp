@@ -77,9 +77,9 @@ int main() {
                                  //Pointer for the user to enter the amount that they want to deposit.
                                 std::unique_ptr<double> _wit_dep_ = std::make_unique<double>(Input<double>("Enter amount: "));     
                                 //Pointer for calculating the user's account balance.
-                                std::unique_ptr<double> account = std::make_unique<double>(BALANCE(-(*_wit_dep_)));                
+                                std::unique_ptr<double> _account_ = std::make_unique<double>(BALANCE(-(*_wit_dep_)));                
                               //Pointer for converting the user's account balance to a string.
-                             std::unique_ptr<std::string> account_balance = std::make_unique<std::string>(CONVERT(*account));         
+                             std::unique_ptr<std::string> account_balance = std::make_unique<std::string>(CONVERT(*_account_));         
                                
                              std::cout<<std::endl;  
                                

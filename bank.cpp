@@ -5,10 +5,10 @@
 int main() {
     
     //Appending to file.
-    std::ofstream File("bank.txt", std::ios::app);
+    std::ofstream File("bank.db", std::ios::app);
     
     //Reading from file.
-    std::ifstream Read("bank.txt");
+    std::ifstream Read("bank.db");
     std::string last;
     
     if(Read.is_open()){

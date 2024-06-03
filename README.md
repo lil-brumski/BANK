@@ -8,7 +8,7 @@ A banking system that I made using C++.
 
 3. You don't need to know C++ to test this project. 
 
-a. Just open the bank.cpp file and run the code in an IDE.
+   a. Just open the bank.cpp file and run the code in an IDE.
 
-b. Or run *clang++ bank.cpp -o bank.o* in any C++ compiler and then enter "./bank
+   b. Or run *clang++ bank.cpp -o bank.o* in any C++ compiler and then enter "./bank
 o".

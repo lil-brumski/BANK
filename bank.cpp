@@ -27,7 +27,7 @@ int main() {
           
           //First condition.
           if(*message == "yes"){
-                 std::unique_ptr<std::string> message_ = std::make_unique<std::string>(Input<std::string>("Options: `dep` for deposit, `wit` for withdraw, and `bor` for borrow: "));  
+                 std::unique_ptr<std::string> message_ = std::make_unique<std::string>(Input<std::string>("Options: `dep` for deposit, `wit` for withdraw, `bal` for account balance, and `bor` for borrow: "));  
                  
                        if(*message_ == "dep"){
                              
@@ -98,6 +98,21 @@ int main() {
                              std::cout<<std::endl;
                                                            
                            }
+                           
+                           
+                       else if(*message_ == "bal"){
+                            double check = BALANCE(0);
+                          
+                            std::cout<<std::endl;  
+                              
+                            std::cout<<"Balance: ₦"<<check<<std::endl;
+                            
+                            File << std::endl;     
+                            
+                            File << "Balance: ₦" << check << std::endl;                    
+                         
+                          }     
+                           
                            
                        else{
                                std::cout<<"Wrong input. Try again.\n";                   

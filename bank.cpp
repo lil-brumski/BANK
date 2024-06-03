@@ -56,15 +56,15 @@ int main() {
         std::unique_ptr<double> wit_dep_ = std::make_unique<double>(Input<double>("Enter amount: "));           
                        
         //Pointer for calculating the user's account balance.
-        std::unique_ptr<double> account = std::make_unique<double>(BALANCE(-(*wit_dep_))); 
+        std::unique_ptr<double> account_ = std::make_unique<double>(BALANCE(-(*wit_dep_))); 
         
-                                   if(*wit_dep_ > *account){
+                                   if(*wit_dep_ > *account_){
                                           std::cout<<"Cannot do that.\n";                                         
-                                          std::unique_ptr<double> account = std::make_unique<double>(BALANCE(*wit_dep_)); 
+                                          std::unique_ptr<double> account_ = std::make_unique<double>(BALANCE(*wit_dep_)); 
                                     }    
                                   else{           
                                          //Pointer for converting the user's account balance to a string.
-                                        std::unique_ptr<std::string> account_balance = std::make_unique<std::string>(CONVERT(*account));                                              
+                                        std::unique_ptr<std::string> account_balance = std::make_unique<std::string>(CONVERT(*account_));                                              
                                         std::cout<<std::endl; 
                                         File<<std::endl;           
                                         std::cout << "Balance: ₦" << *account_balance << std::endl;    

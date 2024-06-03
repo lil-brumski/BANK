@@ -10,7 +10,6 @@ A banking system that I made using C++.
 
    a. Just open the bank.cpp file and run the code in an IDE.
 
-   b. Or run *clang++ bank.cpp -o bank.o* in any C++ compiler and then enter "./bank
-o".
+   b. Or run *clang++ bank.cpp -o bank.o* in any C++ compiler and then enter "./bank.o".
 
 4. To get this project on your device, use a terminal or command line and type: *git clone https://github.com/lil-brumski/BANK.git*.

@@ -34,6 +34,12 @@ int main() {
                              //Pointer for the user to enter the amount that they want to deposit.
         std::unique_ptr<double> wit_dep = std::make_unique<double>(Input<double>("Enter amount: ")); 
        
+       //Makes sure the user doesn't enter a value less than 1.
+       while(*wit_dep < 1){
+           std::cout<<"Cannot deposit that amount!\n";
+           wit_dep = std::make_unique<double>(Input<double>("Enter amount: ")); 
+       }
+       
         //Pointer for calculating the user's account balance.
         std::unique_ptr<double> account = std::make_unique<double>(BALANCE(*wit_dep));     
                    

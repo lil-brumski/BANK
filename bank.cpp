@@ -59,16 +59,16 @@ int main() {
                            
                        else if(*message_ == "wit"){
                            //Pointer for the user to enter the amount that they want to deposit.
-        std::unique_ptr<double> wit_dep_ = std::make_unique<double>(Input<double>("Enter amount: "));           
-                       
-        //Pointer for calculating the user's account balance.
-        std::unique_ptr<double> account_ = std::make_unique<double>(BALANCE(-(*wit_dep_))); 
-        
-                                   if(*wit_dep_ > *account_){
-                                          std::cout<<"Cannot do that.\n";                                         
-                                          std::unique_ptr<double> account_ = std::make_unique<double>(BALANCE(*wit_dep_)); 
+                          std::unique_ptr<double> wit_dep_ = std::make_unique<double>(Input<double>("Enter amount: "));           
+         
+                         double qwerty = BALANCE(0);          
+                                
+                                   if(*wit_dep_ > qwerty){
+                                          std::cout<<"Cannot do that.\n";                                                                    
                                     }    
-                                  else{           
+                                  else{         
+                                           //Pointer for calculating the user's account balance .
+                         std::unique_ptr<double> account_ = std::make_unique<double>(BALANCE(-(*wit_dep_)));   
                                          //Pointer for converting the user's account balance to a string.
                                         std::unique_ptr<std::string> account_balance = std::make_unique<std::string>(CONVERT(*account_));                                              
                                         std::cout<<std::endl; 

@@ -64,7 +64,7 @@ int main() {
                          double qwerty = BALANCE(0);          
                                 
                                    if(*wit_dep_ > qwerty){
-                                          std::cout<<"Cannot do that.\n";                                                                    
+                                          std::cout<<"Cannot withdraw more than account balance! Put funds first.\n";                                                                    
                                     }    
                                   else{         
                                            //Pointer for calculating the user's account balance .

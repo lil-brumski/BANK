@@ -7,7 +7,7 @@ int main() {
     //Appending to file.
     std::ofstream File("bank.db", std::ios::app);
     
-    //Reading from file.
+    //Reading from bank.db file.
     std::ifstream Read("bank.db");
     std::string last;
     
@@ -18,9 +18,29 @@ int main() {
         }
       Read.close();
     }
+    //Converts the last line of the bank.db file to numeric values.
       double initial = FORMAT(last);
-    
+       //Takes the double above and makes it the user's account balance.
       double initial_ = BALANCE(initial);
+      
+      
+    //Read from salary.db file in JOB directory.
+    std::ifstream Job("JOB/salary.db");
+    std::string collect;
+    
+    if(Job.is_open()){
+    std::string dis;
+    while(getline(Job, dis)){
+        collect = dis;
+        }
+      Job.close();
+    }
+    //Converts the last line of salary.db to a numerical value.
+    double salary = FORMAT(collect);
+    //Adds the value gotten in "salary" to the user's account balance.
+    double payment = BALANCE(salary);
+    
+    
     
     while (true) {
           std::unique_ptr<std::string> message = std::make_unique<std::string>(Input<std::string>("Welcome to BrumSky Bank, would you like to make a transaction? `yes` or `no`: "));
@@ -102,14 +122,16 @@ int main() {
                            
                        else if(*message_ == "bal"){
                             double check = BALANCE(0);
-                          
+                            
+                            std::string _check = CONVERT(check);
+                            
                             std::cout<<std::endl;  
                               
-                            std::cout<<"Balance: ₦"<<check<<std::endl;
+                            std::cout<<"Balance: ₦"<<_check<<std::endl;
                             
                             File << std::endl;     
                             
-                            File << "Balance: ₦" << check << std::endl;                    
+                            File << "Balance: ₦" << _check << std::endl;                    
                          
                           }     
                            
